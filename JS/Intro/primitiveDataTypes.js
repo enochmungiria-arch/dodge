@@ -36,7 +36,7 @@ console.log(johnIsMarried)
 
 
 /*Null->lack of value
-ie absence odf value
+ie absence of value
 */
 let nullValue=null
 console.log(nullValue)
