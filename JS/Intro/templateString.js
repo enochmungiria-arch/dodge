@@ -20,3 +20,5 @@ let userDetails2=
 `${firstName} ${secondName} is ${age} years old and he stays at ${address}`;
 console.log(userDetails2)
 console.log(`${firstName} ${secondName} is ${age} years old and he stays at ${address}`)
+
+
