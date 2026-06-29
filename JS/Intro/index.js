@@ -17,7 +17,6 @@ while(true){
 console.log(`The gross salary is${grossMonthlySalary}and its type is ${typeof grossMonthlySalary}`)
 
 nssf=null
-employerContribution=nssf
 let tier1=9000
 let tier2=108000
 
