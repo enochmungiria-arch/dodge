@@ -31,7 +31,12 @@ creating an anonymous function and
 assigning it a variable name.*/
 
 
-    
+ //when the original function is removed it now becomes useless.
+
+ /*function areaRectangle(l,w){
+return l*w;
+}
+ */   
 
 let rA=  function areaRectangle(l,w){
     return l*w;
