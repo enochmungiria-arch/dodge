@@ -4,7 +4,6 @@ you should not loop <infinity>:
 but an exit condition
 while(<condition>){
 /block of code}
-*/
 
 
 let n = 0
@@ -50,14 +49,18 @@ function timeBomb(k){
     }
     
     timeBomb(20)
+    */
     
-/*
+
     
     function table1(){
 let x = prompt("Enter a valid number x")
 if (isNaN(x)!== false){
         console.log(`Invalid value for x
-    Re-enter the value for x`)}
+    Re-enter the value for x`)
+return;
+}
+
 
  else if(x=Number){
     prompt("Enter a valid number y")
@@ -67,14 +70,26 @@ if (isNaN(x)!== false){
 
 }
     
- table2() 
+ table2()
+ 
  
  function table2(number1, number2){
-    number1=5
-    number2=3
+ if(typeof number1!=="number"||
+    number1<=1 ){
+        console.log(`incorrect value for number2`)
+        return;
+    }
+    if(typeof number2!=="number"||
+        number2<=1
+    )
+    {
+        console.log (`Incorrect value for number2`)
+        return;
+    }
+    console.log(`${number1}*${number2}=${number1*number2}`)
 
 
-
- }
+  
+}
     
-*/
+table2()
