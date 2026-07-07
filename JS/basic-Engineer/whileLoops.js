@@ -49,28 +49,26 @@ function timeBomb(k){
     }
     
     timeBomb(20)
-    */
+    
     
 
     
     function table1(){
 let x = prompt("Enter a valid number x")
-if (isNaN(x)!== false){
-        console.log(`Invalid value for x
-    Re-enter the value for x`)
-return;
+if (isNaN(x)!== false){continue;
+
 }
 
 
  else if(x=Number){
     prompt("Enter a valid number y")
 
-
+return;
   }
 
 }
     
- table2()
+ table1()
  
  
  function table2(number1, number2){
@@ -93,3 +91,62 @@ return;
 }
     
 table2()
+
+*/
+
+
+function promptStudents(){
+let num1=null;
+let num2= null;
+
+while(true){
+    num1 = prompt("Enter a valid first number")
+    if (isNaN(num1)!== false)
+        {continue;
+        }
+
+num2 = prompt("Enter a valid second number")
+    if (isNaN(num2)!== false){
+        continue;
+    }
+num1= parseInt(num1)
+num2= parseInt(num2)
+
+if (num1<=0||num2<=0){
+    continue;
+
+}
+break;
+
+
+}
+console.log(`Entered valid number ${num1}, ${num2}`)
+
+
+    printTable(num1,num2)
+}
+
+function printTable (num1,num2){
+if (!num1||num1<0||!num2||num2<0){
+    console.error(`Ensure to use numbers greater than 0`)
+    return;
+}
+
+
+
+let outerLoop = num1;
+
+
+while(outerLoop>0){
+    let innerLoop=num2;
+    while(innerLoop>0){
+        console.log(`outerloop is ${outerLoop} and innerLoop is ${innerLoop}`)
+console.log(`${outerLoop}*${innerLoop}=${outerLoop*innerLoop}`)
+ innerLoop=innerLoop-1;  
+}
+
+    outerLoop= outerLoop -1;
+}
+}
+
+promptStudents()
