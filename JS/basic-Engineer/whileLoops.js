@@ -94,7 +94,6 @@ table2()
 
 */
 
-
 function promptStudents(){
 let num1=null;
 let num2= null;
@@ -150,3 +149,4 @@ console.log(`${outerLoop}*${innerLoop}=${outerLoop*innerLoop}`)
 }
 
 promptStudents()
+
