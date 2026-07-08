@@ -54,8 +54,8 @@ if (!num1||num1<0||!num2||num2<0){
     return;
 }
 
-for(let i= 1;i<=num1;i++){
-for(let j = 1;j<=num2;i++){
+for(let i = true ;i<=num1;i++){
+for(let j = true ;j<=num2;i++){
     console.log(`${i}*${j} =${i*j}`)
 
 }
