@@ -14,13 +14,15 @@ create a file-->its name and 10k lines of code
 
 */
 function testAppend(){
-    const fileData="\nhello world testing file\n";
-   const cb=(error)=>{
-        if(error){
-            console.log(`creating file failed`);
-            console.log(error);
-        }
-    };
-    fs.appendFile(testfile.txt,fileData,cb)
+    let fileData="";
+   
+   const fileName =` ${Date.now()}.txt`
+    const cb=(error)=>{}
+    
+    for (let i=0;i<10000; i++){
+        fileData=fileData+`\nGot you ${i}\n`
+    }
+
+    fs.writeFile(fileName,fileData,cb)
 }
 testAppend()
