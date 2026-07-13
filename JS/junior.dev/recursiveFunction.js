@@ -7,7 +7,7 @@ we need to terminate the loop
 */
 
 
-function salaryGrossPromptProcess(attempt=1);
+function salaryGrossPromptProcess(attempt=1)
     { console.log("Enter your gross salary")
 
     let gross = prompt(`Enter your gross salary`);
