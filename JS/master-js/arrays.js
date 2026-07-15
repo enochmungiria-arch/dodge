@@ -47,4 +47,8 @@ console.log(array1.length)
 
 console.log(array1[1])
 console.log(array1[2])
-console.table(array1[1])
+console.table(array1[5])
+
+for(let i=0;i<20; i++){
+  console.log(array1[i])
+}
