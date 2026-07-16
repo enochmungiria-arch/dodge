@@ -1,0 +1,3 @@
+/*
+API is a way to interface two or more applications.
+*/
