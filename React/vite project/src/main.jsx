@@ -1,5 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+
+//when importing  default export you can give it anyname and then use the path it follows
+//import <anynamefor the default export> from <path-->must begin with a ./before the relative path
+//when you import without using the ./ then js automatically assumes that the export is in the node.modules automatically
+
+import Navigation from './AmazonPage/Navigation';
+
 //components have the following rules
 //It must start with a capital letter
 //it is anormal function
@@ -55,6 +62,7 @@ createRoot(document.getElementById('root')).render(
     <h1>My first react app</h1>
     
     <ParentComponent></ParentComponent>
+    <Navigation/>
     
     </StrictMode>,
 );
