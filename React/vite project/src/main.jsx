@@ -5,66 +5,18 @@ import { createRoot } from 'react-dom/client'
 //import <anynamefor the default export> from <path-->must begin with a ./before the relative path
 //when you import without using the ./ then js automatically assumes that the export is in the node.modules automatically
 
-import Navigation from './AmazonPage/Navigation';
 
+
+import AmazonPage from './AmazonPage';
 //components have the following rules
 //It must start with a capital letter
 //it is anormal function
 //returns only a react fragment or a single html element
+createRoot(document.getElementById("root")).render(
 
-function MyComponent(){
-  return null;//valid jsc
-}
-
-function MyComponent2(){
-  return(
-<div>
-  <h1>I am the best developer in the world</h1>
-</div>
-  )
-}
-
-//when adding multiple html elements we use fragments
-//<></> tose are fragments and they are added to enclose html elements which are many in number
-
-function ReactFragment(){
-  return(
-<>
-<div>
-<h1>This is my second component</h1>
-
-</div>
-<div>
-
-</div>
-
-</>
-
-  )
-}
-
-function ParentComponent(){
-  return(
-    <div>
-<h1>This is the parent component</h1>
-    <MyComponent/>
-    <MyComponent2/>
-    <ReactFragment/>
-    </div>
-  )
-}
-
-createRoot(document.getElementById('root')).render(
-  //if not using the react strictmode you can then use the react fragments in its stead.
-  //it will also be ised to render the react fragments rather than the react strictmode
   <StrictMode>
-
-    <h1>My first react app</h1>
-    
-    <ParentComponent></ParentComponent>
-    <Navigation/>
-    
-    </StrictMode>,
+   <AmazonPage/> 
+  </StrictMode>
 );
 //How to render components-->rendering is displaying components
 //self closing & opening and closing tags

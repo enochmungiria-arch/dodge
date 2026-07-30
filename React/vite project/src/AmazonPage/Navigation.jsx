@@ -10,11 +10,14 @@ import amazon from "./assets/amazon.png";
 
 function Navigation(){
     return(
-    <div>
+    <div className="nav">
+        <img src={amazon} width="60px"/>
+        <input placeholder="Search"/>
+    
+    
 
-       <h2>Navigation section</h2>
-
-    </div>
+       
+</div>
     )
 }
 /* since you might want to render it to main.jsx then 
