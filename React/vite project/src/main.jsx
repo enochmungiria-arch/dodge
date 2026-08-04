@@ -7,7 +7,7 @@ import { createRoot } from 'react-dom/client'
 
 
 
-import AmazonPage from './AmazonPage';
+import StateAndEvents from "./StateAndEvents/clickMe.jsx";
 //components have the following rules
 //It must start with a capital letter
 //it is anormal function
@@ -15,7 +15,7 @@ import AmazonPage from './AmazonPage';
 createRoot(document.getElementById("root")).render(
 
   <StrictMode>
-   <AmazonPage/> 
+   <StateAndEvents/>
   </StrictMode>
 );
 //How to render components-->rendering is displaying components
