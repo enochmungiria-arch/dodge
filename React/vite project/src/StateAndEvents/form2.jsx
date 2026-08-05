@@ -1,28 +1,18 @@
-import {useState} from "react"
-function Form(){
+ import {useState} from "react"
+ 
+function Form2(){
+       const [input, setInput]=useState(["","","",""])
+       
 
-
-    const [name,setName]=useState("")
-    const [email,setEmail]=useState("")
-    const [password,setPassword]=useState("")
-
-const nameOnChange=(e)=>{
-    setName(e.target.value)
-}
-const emailOnChange=(e)=>{
-    setEmail(e.target.value)
-}
-const passwordOnChange=(e)=>{
-    setPassword(e.target.value)
-}
-const onSubmit=()=>{
+       const onSubmit=()=>{
     console.log('submitted successfully')
     console.log(`name is  ${name}`)
     console.log(`email is ${email}`)
+    console.log (`phone is ${phone}`)
     console.log (`password is ${password}`)
-    
-    }
-  return(
+       }
+
+    return(
     <div>
         <p>
             <div>
@@ -31,7 +21,7 @@ const onSubmit=()=>{
         </p>
         <p>
             <div>
-                <input  type="text" onChange={nameOnChange}/>
+                <input  value={input.name} onChange={nameOnChange}/>
             </div>
         </p>
         <p>
@@ -42,9 +32,21 @@ const onSubmit=()=>{
         </p>
         <p>
             <div>
-                <input type="email" onChange={{emailOnChange}}/>
+                <input value={input.name} onChange={{emailOnChange}}/>
             </div>
         </p>
+        <p>
+            <div>
+                <label>Phone</label>
+                
+            </div>
+        </p>
+        <p>
+            <div>
+                <input type="tel" onChange={phoneOnChange}/>
+            </div>
+        </p>
+
         <p>
             <div>
                 <label>Password</label>
@@ -56,15 +58,14 @@ const onSubmit=()=>{
                 <input type="password" onChange={passwordOnChange}/>
             </div>
         </p>
-        <p onClick={onSubmit}>Submit</p>
-    
-
-    <ul>
+        <button onClick={onSubmit}>Submit</button>
+      <ul>
         <li>Name {name}</li>
         <li>Email {email}</li>
         <li>Password {password}</li>
     </ul>
-    </div>
-   ) 
+ 
+</div>
+    )
 }
-export default Form;
+export default Form2;

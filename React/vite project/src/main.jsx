@@ -7,7 +7,7 @@ import { createRoot } from 'react-dom/client'
 
 
 
-import StateAndEvents from "./StateAndEvents/clickMe.jsx";
+import StateAndEvents from "./StateAndEvents/ColorsAndCircles.jsx"
 //components have the following rules
 //It must start with a capital letter
 //it is anormal function
