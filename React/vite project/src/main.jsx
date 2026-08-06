@@ -7,7 +7,7 @@ import { createRoot } from 'react-dom/client'
 
 
 
-import StateAndEvents from "./StateAndEvents/ColorsAndCircles.jsx"
+import SideEffects from "./SideEffects/StopWatch.jsx"
 //components have the following rules
 //It must start with a capital letter
 //it is anormal function
@@ -15,7 +15,7 @@ import StateAndEvents from "./StateAndEvents/ColorsAndCircles.jsx"
 createRoot(document.getElementById("root")).render(
 
   <StrictMode>
-   <StateAndEvents/>
+   <SideEffects/>
   </StrictMode>
 );
 //How to render components-->rendering is displaying components

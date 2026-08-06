@@ -1,46 +1,49 @@
 import { useState } from "react";
 
 function ColorsAndCircles() {
-    const [colors, setColors] = useState([]);
+    const [colors, setColors] = useState(["yellow", "blue", "green", "red"]);
+
+    const addColor = (color) => {
+        setColors((currentColors) => [...currentColors, color]);
+    }
+    const removeColor= (indexToRemove)=>{
+        setColors((currentColors)=>currentColors.filter((_,index)=>index!==indexToRemove))
+    }
+
+
+    return (
+        <div>
+            <ColorForm addColor={addColor} />
+            <ColorList colors={colors} onRemoveColor={removeColor} />
+        </div>
+    );
+}
+
+function ColorForm({ addColor }) {
     const [color, setColor] = useState("");
 
-
-    console.log("colours clicked render ", new Date())
-
-    const onSubmit = () => {
-        if (!color.trim()) return;
-
-        const clonedColors = structuredClone(colors);
-        clonedColors.push(color);
-        setColors(clonedColors);
-        
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const trimmerColor = color.trim();
+        if (!trimmerColor) return;
+        addColor(trimmerColor);
+        setColor("");
     };
 
     return (
         <div>
-            <ColorForm color={color} setColor={setColor} onSubmit={onSubmit} />
-            <ColorList colors={colors} setColors={setColors} />
-        </div>
-    );
-}
-
-function ColorForm(props) {
-    const { colors, setColors, onSubmit } = props;
-    const {color, setColour}= useState("")
-    console.log("colours clicked render ", new Date())
-
-    return (
-        <div>
             <label>Enter color</label>
-            <input value={color} onChange={(e) => setColor(e.target.value)} />
-            <button onClick={onSubmit}>Save</button>
+            <input type="text" value={color} onChange={(e) => setColor(e.target.value)} />
+            <button type="submit">add Color</button>
         </div>
     );
 }
 
-function ColorList(props) {
-    const { colors } = props;
-
+function ColorList({ colors, onRemoveColor }) {
+    
+const removeColor=(index) =>{
+    console.log("remove color", colors[index],"index is ",index)
+}
     return (
         <div style={{ marginTop: "20px" }}>
             {colors.map((color, index) => (
@@ -55,7 +58,8 @@ function ColorList(props) {
                         color: "white",
                     }}
                 >
-                    {color}
+                   <span>{color}</span>
+                    <button type="button" onClick={() => onRemoveColor(index)}>Remove</button>
                 </div>
             ))}
         </div>
