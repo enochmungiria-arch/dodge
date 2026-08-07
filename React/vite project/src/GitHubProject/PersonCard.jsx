@@ -13,9 +13,11 @@ function PersonCard(props){
             let response = await axios({
               method:"GET" ,
               url: followers_url, 
-              headers:{
-                Authorization: 
-                Accept:
+headers:{Authorization: `Bearer YOUR_TOKEN_HERE`,
+Accept: "application/vnd.github+json",
+
+
+ 
               }
               
             })
