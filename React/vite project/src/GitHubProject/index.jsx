@@ -13,10 +13,7 @@ function GitHubProject(){
             let response= await axios({
             method: "GET",
             url: "https://api.github.com/users",
-            headers:{
-                Authorization:'Bearer private',
-                Accept:"application/vnd.github+json"
-            },
+            
             
             })
          setPeople(response.data)

@@ -17,10 +17,7 @@ const onSearch=async ()=>{
             let response = await axios({
               method:"GET" ,
               url: "https://api.github.com/search/users" ,
-              headers:{
-                Authorization: 'Bearer....',
-                Accept:"application/vnd.github+json",
-              },
+
               params:{
                 q:trimmedString,
               }

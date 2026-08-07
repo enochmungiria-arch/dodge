@@ -7,11 +7,7 @@ const{repos, setRepos}=useState([])
 const getRepos= async()=>{
     let response = await axios({
         method:"GET" ,
-              url: repos_url ,
-              headers:{
-                Authorization: 'Bearer //private',
-                Accept:"application/vnd.github+json",
-              },
+              url: repos_url,
     })
     console.log(response)
     setRepos(response.data)
