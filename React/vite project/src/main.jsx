@@ -7,7 +7,7 @@ import { createRoot } from 'react-dom/client'
 
 
 
-import SideEffects from "./SideEffects/StopWatch.jsx"
+import GitHubProject from "./GitHubProject/index.jsx"
 //components have the following rules
 //It must start with a capital letter
 //it is anormal function
@@ -15,7 +15,7 @@ import SideEffects from "./SideEffects/StopWatch.jsx"
 createRoot(document.getElementById("root")).render(
 
   <StrictMode>
-   <SideEffects/>
+   <GitHubProject/>
   </StrictMode>
 );
 //How to render components-->rendering is displaying components
