@@ -15,20 +15,17 @@ function PersonCard(props){
               url: followers_url, 
 
 
-headers:{Authorization: `Bearer YOUR_TOKEN_HERE`,
-Accept: "application/vnd.github+json",
+headers:{ 
+         Authorization: `Bearer YOUR_TOKEN_HERE`,
+         Accept: "application/vnd.github+json",
 
-
-              headers:{
-                Authorization://private ,
-                Accept://private
- 7a0382a (github project)
-              }
 
               
- adb7f32 (github project)
+
               
-            })
+ 
+              
+        });
             setFollowers(response.data);
         } catch(e){}
     }

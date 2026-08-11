@@ -7,7 +7,8 @@ import { createRoot } from 'react-dom/client'
 
 
 
-import GitHubProject from "./GitHubProject/index.jsx"
+
+import Routing from './Routing';
 //components have the following rules
 //It must start with a capital letter
 //it is anormal function
@@ -15,7 +16,7 @@ import GitHubProject from "./GitHubProject/index.jsx"
 createRoot(document.getElementById("root")).render(
 
   <StrictMode>
-   <GitHubProject/>
+   <Routing/>
   </StrictMode>
 );
 //How to render components-->rendering is displaying components
