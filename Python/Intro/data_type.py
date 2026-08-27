@@ -13,7 +13,7 @@ e = {"key": "value"}
 #for dictionary use bracket notation
 
 print("x is",x,"its type",type(x))
-print (f "y is {y} its type is {type(y)}") #output :<class 'float>
+print (f "y is" {y} " its type is "{type(y)}) #output :<class 'float>
 print(type(z))
 print(type(a))
 print(type(b))
