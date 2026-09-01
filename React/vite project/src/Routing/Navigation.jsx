@@ -12,6 +12,7 @@ function Navigation(){
       }}} >
         Home
       </NavLink>
+      
       <NavLink to="/about" 
       style={({ isActive})=>{{
         color: isActive? "red" :"black"
