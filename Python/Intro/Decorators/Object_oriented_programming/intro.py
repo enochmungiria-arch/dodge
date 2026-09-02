@@ -8,8 +8,14 @@ class House:
     architect="Kimani"
 
 
-    def configure_house(self, bedrooms, bathrooms, floors, area):
-        self.bedrooms=bedrooms
+    def __init__(self, owner, location):
+        print("House object created Initializer called")
+        self.owner=owner
+        self.location=location
+
+
+    def config_house(self, owner,location):
+        self.owner=owner
         self.location=location
         
 
@@ -17,9 +23,7 @@ class House:
         print(self)
         print(self.__dict__)    
 
-macrine_house=House()
-macrine_house.owner="Macrine"
-macrine_house.location="kikuyu"  
+macrine_house=House(owner="Macrine", location="Kikuyu")  
 print(f"Macrine House Owner: {macrine_house.owner}")  
 print(f"Macrine House Location: {macrine_house.location}")
 print(f"Macrine House Architect: {macrine_house.architect}")
@@ -28,9 +32,7 @@ print(f"Macrine House Bathrooms: {macrine_house.bathrooms}")
 print(f"Macrine House Floors: {macrine_house.floors}")
 print(f"Macrine House Area: {macrine_house.area}")
 
-daniel_house=House()
-daniel_house.owner="Daniel"
-daniel_house.location="Nairobi"
+daniel_house=House(owner="Daniel", location="Nairobi")
 print(f"Daniel House Owner: {daniel_house.owner}")
 print(f"Daniel House Location: {daniel_house.location}")
 print(f"Daniel House Architect: {daniel_house.architect}")
