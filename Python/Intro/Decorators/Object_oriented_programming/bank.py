@@ -1,9 +1,13 @@
 class BankAccount:
+    clients=0
+    bank_name="Post Bank"
 
     def __init__(self, name, balance,account_no):
         self.name = name
         self.balance = balance
         self.account_no = account_no
+
+
      
      
      @property   
@@ -35,6 +39,22 @@ class BankAccount:
         print(f"balance {self.balance}")
 
 
-john=BankAccount(name="John Mwangi", balance=0,account_no="233495467")
 
-print("John's balance", john.balance)
+    @staticmethod
+    def calculate_interest(amount, years);
+    rate=10
+    interest=amount*rate*years/100
+    total=amount+interest
+    print("if you take a loan of")
+    print("amount", amount)
+
+    @classmethod
+    def  add_client(cls):
+        cls.clients+=1
+        print("total clients",cls.clients)   
+
+
+john=BankAccount(name="John Mwangi", balance=0,account_no="233495467")
+print("total clients",BankAccount.clients)
+Samuel=BankAccount(name="Samuel", balance=0,account_no="233312467")
+print(" total Client", BankAccount.clients)
