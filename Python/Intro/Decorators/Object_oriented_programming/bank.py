@@ -4,10 +4,23 @@ class BankAccount:
         self.name = name
         self.balance = balance
         self.account_no = account_no
+     
+     
+     @property   
+    def balance(self):
+        print("somebody tried to read John's balance")
+        return self._balance
 
+     @balance.setter   
+    def balance(self, value):
+        if not instance(value,( int, float)):
+            print("Ensure you pass a number for new balance ")
+            return
+        if value<0:
+            print("Ensure the new number must be greater than 0")
+            return
+        self._balance=value        
 
-    def get_balance(self):
-        pass
 
     def deposit(self):
         pass
@@ -24,5 +37,4 @@ class BankAccount:
 
 john=BankAccount(name="John Mwangi", balance=0,account_no="233495467")
 
-john.show_account_details()
-
+print("John's balance", john.balance)
