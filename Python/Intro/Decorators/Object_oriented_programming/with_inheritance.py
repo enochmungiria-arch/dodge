@@ -28,7 +28,7 @@ class shape:
 
 class rectangle(shape):
     def __init__(self, length, width):
-        super().__init__("Rectangle")
+        super().__init__(shape_name="Rectangle")
         self.length=length
         self.width=width
 
@@ -39,10 +39,28 @@ class rectangle(shape):
         return 2*(self.length+self.width)
 
 
-r1=rectangle(length=20, width=10)
-print("shape name", r1.shape_name)
-print("Area is", r1.area())
-r1.describe()
-r1.display_info()        
+class Triangle(shape):
+    def __init__(self, base, height):
+        super().__init__(shape_name="Triangle")
+        
+
+ class Square(reactangle):
+    def __init__(self, side):
+        super().__init__(length=side, width=side)
+        self.shape_name="Square"      
+
+
+s1=Square(side=10)
+
+print("shape name", s1.shape_name)
+print("Area is", s1.area())
+s1.describe()
+s1.display_info() 
+
+
+
+t1=Triangle(20,32)
+t1.area()
+
 
 
